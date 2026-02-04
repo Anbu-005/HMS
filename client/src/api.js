@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+const isProduction = import.meta.env.PROD;
+export const BASE_URL = isProduction ? window.location.origin : 'http://localhost:5000';
+
 const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: `${BASE_URL}/api`,
 });
 
 api.interceptors.request.use((config) => {
@@ -11,8 +14,6 @@ api.interceptors.request.use((config) => {
     }
     return config;
 });
-
-export const BASE_URL = 'http://localhost:5000';
 
 export const getImageUrl = (path) => {
     if (!path) return 'https://via.placeholder.com/300?text=No+Photo';

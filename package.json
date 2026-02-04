@@ -1,0 +1,17 @@
+{
+    "name": "hms-monolith",
+    "version": "1.0.0",
+    "description": "Hospital Management System - Unified Deployment",
+    "scripts": {
+        "install-server": "cd server && npm install",
+        "install-client": "cd client && npm install",
+        "install-all": "npm run install-server && npm run install-client",
+        "build-client": "cd client && npm run build",
+        "build": "npm run install-all && npm run build-client",
+        "start": "cd server && npm start",
+        "dev": "npm run build && npm run start"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
