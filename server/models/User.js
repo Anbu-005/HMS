@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        match: [/^[a-zA-Z0-9._%+-]+@gmail\.com$/, 'Please provide a valid @gmail.com address']
+        match: [/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Please provide a valid email address']
     },
     password: { type: String, required: true },
     role: { type: String, required: true, enum: ['admin', 'doctor', 'patient'] },
@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     photo: { type: String },
     phone: {
         type: String,
-        match: [/^\d{10}$/, 'Please fill a valid 10-digit phone number']
+        match: [/^\+?[\d\s-]{10,}$/, 'Please fill a valid phone number (at least 10 digits)']
     },
     status: {
         type: String,

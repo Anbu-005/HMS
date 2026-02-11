@@ -52,9 +52,7 @@ const AdminDashboard = () => {
         if (photo) formData.append('photo', photo);
 
         try {
-            await api.post('/admin/doctor', formData, {
-                headers: { 'Content-Type': 'multipart/form-data' }
-            });
+            await api.post('/admin/doctor', formData);
             alert('Doctor added successfully');
 
             // Reset form
