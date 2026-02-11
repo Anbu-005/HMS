@@ -78,7 +78,7 @@ const DoctorDashboard = () => {
 
     return (
         <div className="container">
-            <div className="header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
+            <div className="header">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <div style={{ background: 'var(--primary)', color: 'white', padding: '0.8rem', borderRadius: '14px', fontWeight: 'bold' }}>HMS</div>
                     <h2 style={{ margin: 0, color: 'white' }}>Doctor Center</h2>
@@ -87,8 +87,8 @@ const DoctorDashboard = () => {
             </div>
 
             {profile && (
-                <div className="card profile-hero" style={{ padding: '2.5rem' }}>
-                    <img src={getImageUrl(profile.photo)} alt={profile.name} className="profile-avatar-large" style={{ borderRadius: '24px', objectFit: 'cover' }} />
+                <div className="card profile-hero">
+                    <img src={getImageUrl(profile.photo)} alt={profile.name} className="profile-avatar-large" style={{ objectFit: 'cover' }} />
                     <div style={{ flex: 1 }}>
                         <h1 style={{ marginBottom: '0.5rem', color: 'white' }}>Dr. {profile.name}</h1>
                         <p style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '1.2rem', margin: '0 0 1rem' }}>{profile.specialization}</p>

@@ -49,7 +49,7 @@ const DoctorProfile = () => {
 
     return (
         <div className="container">
-            <div className="header" style={{ marginBottom: '3rem' }}>
+            <div className="header">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <div style={{ background: 'var(--primary)', color: 'white', padding: '0.8rem', borderRadius: '14px', fontWeight: 'bold' }}>HMS</div>
                     <h2 style={{ margin: 0, color: 'white' }}>Expert Profile</h2>
@@ -57,7 +57,7 @@ const DoctorProfile = () => {
                 <button onClick={() => navigate('/patient')} className="btn btn-outline">Back to Dashboard</button>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '3rem', marginTop: '2rem' }}>
+            <div className="grid-2-col" style={{ marginTop: '2rem' }}>
                 <div className="card" style={{ textAlign: 'center' }}>
                     <img
                         src={getImageUrl(doctor.photo)}
@@ -87,7 +87,7 @@ const DoctorProfile = () => {
                             Committed to delivering world-class medical services through innovative treatments and empathetic patient engagement.
                         </p>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '1.5rem' }}>
                             <div className="stat-item">
                                 <div className="stat-value">{doctor.age || '35'}</div>
                                 <div className="stat-label">Years Old</div>
@@ -98,7 +98,7 @@ const DoctorProfile = () => {
                             </div>
                             <div className="stat-item">
                                 <div className="stat-value">4.9</div>
-                                <div className="stat-label">Patient Rating</div>
+                                <div className="stat-label">Rating</div>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ const DoctorProfile = () => {
                     {doctor.status === 'active' ? (
                         <div className="card" style={{ border: '1px solid var(--primary)' }}>
                             <h3 style={{ marginBottom: '1.5rem' }}>Reserve Appointment</h3>
-                            <form onSubmit={handleBook} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr auto', gap: '1.5rem', alignItems: 'end' }}>
+                            <form onSubmit={handleBook} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem', alignItems: 'end' }}>
                                 <div className="form-group" style={{ marginBottom: 0 }}>
                                     <label className="form-label">Preferred Date</label>
                                     <input className="form-control" type="date" onChange={e => setBookingDate(e.target.value)} required />

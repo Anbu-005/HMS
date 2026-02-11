@@ -97,7 +97,7 @@ const AdminDashboard = () => {
 
     return (
         <div className="container">
-            <div className="header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
+            <div className="header">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <div style={{ background: 'var(--primary)', color: 'white', padding: '0.8rem', borderRadius: '14px', fontWeight: 'bold' }}>HMS</div>
                     <h2 style={{ margin: 0, color: 'white' }}>Admin Control</h2>
@@ -198,14 +198,14 @@ const AdminDashboard = () => {
                                     className="form-control"
                                     type="file"
                                     accept="image/*"
-                                    style={{ padding: '0.6rem', flex: 1, minWidth: '250px' }}
+                                    style={{ padding: '0.6rem', flex: 1, minWidth: '200px' }}
                                     onChange={e => {
                                         const file = e.target.files[0];
                                         setPhoto(file);
                                         if (file) setPhotoPreview(URL.createObjectURL(file));
                                     }}
                                 />
-                                <button className="btn btn-primary" type="submit" style={{ height: '54px', padding: '0 3rem', fontSize: '1rem' }}>
+                                <button className="btn btn-primary" type="submit">
                                     Complete Onboarding
                                 </button>
                             </div>

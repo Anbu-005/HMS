@@ -26,7 +26,7 @@ const Login = () => {
 
     return (
         <div className="auth-container">
-            <div className="auth-box card" style={{ padding: '3rem', maxWidth: '420px' }}>
+            <div className="auth-box card">
                 <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
                     <div style={{ background: 'var(--primary)', color: 'white', display: 'inline-block', padding: '1rem', borderRadius: '18px', fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '1rem', boxShadow: 'var(--shadow-lg)' }}>HMS</div>
                     <h2 style={{ fontSize: '2rem', margin: 0, color: 'white' }}>Welcome Back</h2>
@@ -62,7 +62,7 @@ const Login = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '1rem', fontSize: '1.1rem' }}>
+                    <button type="submit" className="btn btn-primary">
                         Sign In
                     </button>
                     <p style={{ marginTop: '2rem', textAlign: 'center', color: 'var(--text-muted)' }}>

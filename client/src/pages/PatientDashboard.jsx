@@ -81,7 +81,7 @@ Generated on: ${new Date().toLocaleString()}
 
     return (
         <div className="container">
-            <div className="header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
+            <div className="header">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <div style={{ background: 'var(--primary)', color: 'white', padding: '0.8rem', borderRadius: '14px', fontWeight: 'bold' }}>HMS</div>
                     <h2 style={{ margin: 0, color: 'white' }}>Premium Portal</h2>
